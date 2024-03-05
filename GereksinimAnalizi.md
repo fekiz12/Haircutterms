@@ -1,0 +1,33 @@
+
+## Gereksinimler
+1. Randevu oluşturma (Cengiz)
+2. Randevu güncelleme (Aslan)
+3. Randevu listeleme (Arda)
+4. Randevu iptal etme (Furkan)
+5. Geçmiş Randevuları Listeleme (Cengiz)
+6. Profil gösterme (Aslan)
+7. Profil yönetimi (Arda)
+8. Üyelik oluşturma (Furkan)
+9. Hizmetlerin listelenmesi (Cengiz)
+10. Hizmet Ekleme (Aslan)
+11. Hizmet Silme (Arda)
+12. Hizmet Güncelleme (Furkan)
+13. Hizmeti favorilere ekleme (Cengiz)
+14. Favori hizmetleri listeleme (Aslan)
+15. Sepeti görüntüleme (Arda)
+16. Sepete ekleme (Furkan)
+17. Sepetten çıkarma (Cengiz)
+18. Ödeme yapma (Aslan)
+19. İndirim/Kupon Uygulama (Arda)
+20. Ürün listeleme (Furkan)
+21. Personelleri Listeleme (Cengiz)
+22. Etkinlik duyuruları (Aslan)
+23. Galeri oluşturma (Arda)
+24. İletişim (Furkan)
+
+
+# Gereksinim Dağılımları
+1. [Furkan Ekiz'in Gereksinimleri](FurkanEkizGereksinim.md)
+2. [Arda Nemutlu'nun Gereksinimleri](ArdaNemutluGereksinim.md)
+3. [Cengiz Ekmekçi'nin Gereksinimleri](CengizEkmekciGereksinim.md)
+4. [Aslan Tagizade'nin Gerekswinimleri](AslanTagizadeGereksinim.md)
