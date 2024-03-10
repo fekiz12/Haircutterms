@@ -1,2 +1,2 @@
 # Proje Planı
-![projeplani](https://github.com/fekiz12/Haircutterms/assets/149302053/4c6a76b9-f0bd-475b-85a5-6b63352d3332)
+![projeplani](https://github.com/fekiz12/Haircutterms/assets/149302053/976cc722-8cce-4e09-9e38-1f37c64c2f9e)
