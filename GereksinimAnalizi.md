@@ -4,7 +4,7 @@
 2. Randevu güncelleme (Aslan)
 3. Randevu listeleme (Arda)
 4. Randevu iptal etme (Furkan)
-5. Geçmiş Randevuları Listeleme (Cengiz)
+5. Kullanıcı girişi (Cengiz)
 6. Profil gösterme (Aslan)
 7. Profil yönetimi (Arda)
 8. Üyelik oluşturma (Furkan)
