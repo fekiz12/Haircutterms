@@ -1,6 +1,6 @@
 <strong>1.Randevu Oluşturma: </strong>Randevu oluşturma işlemi, bir etkinlik veya hizmet için tarih ve saat belirleme sürecidir. Müşteri talebi alınır, uygun zaman belirlenir, onaylanır ve randevu gerçekleştirilir. Sonrasında takip işlemleri yapılır.
 
-<strong>2.Geçmiş Randevuları Listeleme: </strong>Geçmiş randevuları listeleme işlemi, bir kişinin veya organizasyonun daha önce yapılan randevuları görmesini sağlayan bir süreçtir.Bu süreç kullanıcı geçmiş randevu bilgilerini takip etmesini sağlar.
+<strong>2.Kullanıcı girişi: </strong>Kullanıcı girişi işlemi, bir kullanıcının bir bilgisayar, web sitesi, uygulama veya herhangi bir dijital platforma erişim sağlamak için kimlik doğrulama sürecini başlatması ve tamamlamasıdır.
 
 <strong>3.Hizmetlerin Listelenmesi: </strong>Hizmetlerin listelenmesi işlemi, müşterilere veya kullanıcılara sunulan hizmet yelpazesini görsel olarak tanıtmak ve seçim yapmalarını kolaylaştırmak için önemlidir.
 
