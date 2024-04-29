@@ -6,7 +6,7 @@ Haircutterms, kullanıcı dostu arayüzü ve kolay rezervasyon sistemi ile müş
 
 <strong>Proje kategorisi:</strong> E-ticaret ve hizmet
 
-<strong>Referans Uygulama:</strong> maneethical.com
+<strong>Referans Uygulama:</strong> [maneethical](https://www.maneethical.com/products)
 
 <strong>Uygulama Adresi:</strong>
 
