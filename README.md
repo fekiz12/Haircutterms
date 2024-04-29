@@ -8,7 +8,7 @@ Haircutterms, kullanıcı dostu arayüzü ve kolay rezervasyon sistemi ile müş
 
 <strong>Referans Uygulama:</strong> maneethical.com
 
-<strong>Uygulam Adresi:</strong>
+<strong>Uygulama Adresi:</strong>
 
 <strong>Grup Adı:</strong> Vultures
 
