@@ -3,8 +3,8 @@
 2. <strong>Profil gösterme:</strong>
 Profil gösterimi, kullanıcıların bilgilerinin veya tercihlerinin bir arayüzde görsel olarak sunulması işlemidir. Bu, genellikle kullanıcıların hesaplarına erişim sağlamak ve profillerindeki bilgileri görüntülemek için kullanılır.
 
-3. <strong>Ürün Ekleme:</strong>
-Ürün ekleme işlemi, yeni bir ürünün sisteme kaydedilmesini ve kullanıcılara sunulmasını sağlar.
+3. <strong>Hizmet Ekleme:</strong>
+Hizmet ekleme işlemi, yeni bir hizmetin sisteme kaydedilmesini ve kullanıcılara sunulmasını sağlar.
 
 4. <strong>Favori hizmetleri listeleme: </strong>
  Müşterilerin kendi hesaplarına giriş yaparak, beğendikleri veya favori olarak işaretledikleri kuafor hizmetlerini görüntüleyebilmelerini sağlayan bir özelliktir.
