@@ -1,0 +1,36 @@
+.personel-hizmet-item{
+    width: 29%;
+    margin: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 110px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+    display: inline-block;
+}
+.personel-item-image{
+    width: 70%;
+    
+    border-radius: 15px 15px 0px 0px;
+}
+.personel-item-info{
+    padding: 10px;
+    padding-bottom: 1px;
+    
+}
+
+.personel-item-name-rating p{
+    font-size: 20px;
+    font-weight: 500;
+    
+}
+.hizmet-item-name-rating img{
+    width: 70px;
+}
+
+
+
+.hizmet-item-img-container{
+    position: relative;
+}
+
+
