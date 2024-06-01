@@ -12,8 +12,6 @@ import Hizmetler from './Pages/Hizmetler/Hizmetler';
 import Book from './Pages/Book/Book';
 import PlaceOrder from './Pages/PlaceOrder/PlaceOrder'
 import Galery from './Pages/Galery/Galery';
-import Payment from './Pages/Payment/Payment';
-import Favoriler from './Pages/Favoriler/Favoriler';
 import Personel from './Pages/Personel/Personel';
 import Verify from './Pages/Verify/Verify';
 
@@ -30,7 +28,6 @@ const App = () => {
     
     <Routes>
       <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/favoriler' element={<Favoriler></Favoriler>}></Route>
         <Route path='/shop' element={<Shop></Shop>}> </Route>
         <Route path='/contact' element={<ContactUs></ContactUs>}></Route>
         <Route path='/cart' element={<Cart></Cart>}></Route>
