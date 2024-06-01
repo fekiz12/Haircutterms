@@ -1,0 +1,57 @@
+
+import React, { useState } from 'react';
+import Navbar from './Components/Navbar/Navbar';
+import { Route, Router, Routes } from 'react-router-dom';
+import Home from './Pages/Home/Home';
+import ContactUs from './Pages/ContactUs/ContactUs';
+import Shop from './Pages/Shop/Shop';
+import Cart from './Pages/Cart/Cart';
+import LoginPopup from './Components/LoginPopup/LoginPopup';
+import Footer from './Components/Footer/Footer';
+import Hizmetler from './Pages/Hizmetler/Hizmetler';
+import Book from './Pages/Book/Book';
+import PlaceOrder from './Pages/PlaceOrder/PlaceOrder'
+import Galery from './Pages/Galery/Galery';
+import Payment from './Pages/Payment/Payment';
+import Favoriler from './Pages/Favoriler/Favoriler';
+import Personel from './Pages/Personel/Personel';
+import Verify from './Pages/Verify/Verify';
+
+const App = () => {
+
+  const [showLogin,setShowLogin] = useState(false)
+  
+  return (
+<>
+    {showLogin?<LoginPopup setShowLogin={setShowLogin}/>:<></>}
+
+    <div className="App">
+    <Navbar setShowLogin={setShowLogin}/>
+    
+    <Routes>
+      <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/favoriler' element={<Favoriler></Favoriler>}></Route>
+        <Route path='/shop' element={<Shop></Shop>}> </Route>
+        <Route path='/contact' element={<ContactUs></ContactUs>}></Route>
+        <Route path='/cart' element={<Cart></Cart>}></Route>
+        <Route path='/galery' element={<Galery></Galery>}></Route>
+        <Route path='/services' element={<Hizmetler></Hizmetler>}></Route>
+        <Route path='/book' element={<Book></Book>}></Route>
+        <Route path='/placeorder' element={<PlaceOrder></PlaceOrder>}></Route>
+        <Route path='/verify' element={<Verify></Verify>}></Route>
+        <Route path='/personel' element={<Personel></Personel>}></Route>
+        
+    </Routes>    
+
+    
+    
+    
+    
+    
+    <Footer></Footer>
+    </div>
+    </>
+  );
+}
+
+export default App;
