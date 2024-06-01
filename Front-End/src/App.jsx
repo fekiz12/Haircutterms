@@ -12,8 +12,6 @@ import Hizmetler from './Pages/Hizmetler/Hizmetler';
 import Book from './Pages/Book/Book';
 import PlaceOrder from './Pages/PlaceOrder/PlaceOrder'
 import Galery from './Pages/Galery/Galery';
-import Payment from './Pages/Payment/Payment';
-import Favoriler from './Pages/Favoriler/Favoriler';
 import Personel from './Pages/Personel/Personel';
 import Verify from './Pages/Verify/Verify';
 
