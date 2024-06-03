@@ -1,12 +1,35 @@
 import productModel from "../models/ProductModel.js";
 import ProductModel from "../models/ProductModel.js";
 import  fs from "fs"
+//add product item
 
+const addProduct =async(req,res)=>{
+    let image_filename=`${req.file.filename}`;
 
-
-
+    const product =new productModel({
+        name:req.body.name,
+        description:req.body.description,
+        price:req.body.price,
+        category:req.body.category,
+        image:image_filename
+    })
+    try{
+        await product.save();
+        res.json({success:true,message:"Product Added"})
+    }catch(error){
+        console.log(error)
+        res.json({success:false,message:"ERROR"})
+    }
 
     // all product list 
+    
+
+}
+
+
+
+
+    
     
 
 
@@ -33,4 +56,4 @@ const removeProduct =async(req,res)=>{
     }
 }
 
-export {listProduct,removeProduct}
+export {listProduct,removeProduct,addProduct}

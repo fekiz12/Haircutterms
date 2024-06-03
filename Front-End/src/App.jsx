@@ -14,6 +14,8 @@ import PlaceOrder from './Pages/PlaceOrder/PlaceOrder'
 import Galery from './Pages/Galery/Galery';
 import Personel from './Pages/Personel/Personel';
 import Verify from './Pages/Verify/Verify';
+import MyOrders from './Pages/MyOrders/MyOrders';
+
 
 const App = () => {
 
@@ -37,7 +39,7 @@ const App = () => {
         <Route path='/placeorder' element={<PlaceOrder></PlaceOrder>}></Route>
         <Route path='/verify' element={<Verify></Verify>}></Route>
         <Route path='/personel' element={<Personel></Personel>}></Route>
-        
+        <Route path='/myorders' element={<MyOrders></MyOrders>}></Route>
     </Routes>    
 
     

@@ -59,7 +59,7 @@ return(
             {!token?<button onClick={() =>setShowLogin(true)} className="btn2">Sign In</button>:<div className="navbar-profile">
             <img src={profile_icon}></img>
             <ul className="nav-profile-dropdown">
-            <li><img src={bag_icon}></img>
+            <li onClick={()=>navigate("/myorders")}><img src={bag_icon}></img>
             <p>Orders</p></li>
             <hr></hr>
             <li onClick={logout}><img src={logout_icon}></img><p>Logout</p></li>
