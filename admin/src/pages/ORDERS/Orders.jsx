@@ -1,9 +1,4 @@
-import React from 'react'
-import "../ORDERS/Orders.css"
-const Orders = () => {
-  return (
-    <div>
-        import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../ORDERS/Orders.css"
 import axios from "axios"
 import {toast} from "react-toastify"
@@ -62,17 +57,16 @@ const Orders = ({url}) => {
       </div>
       <p>Items:  {order.items.length}</p>
       <p>${order.amount}</p>
-      
+      <select onChange={(event)=>statusHandler(event,order._id)} value={order.status}>
+        <option value="Product Processing">Product Processing</option>
+        <option value="Out for delivery">Out for delivery</option>
+        <option value="Delivered">Delivered</option>
+      </select>
       </div>
     ))}
 
     </div>
         
-    </div>
-  )
-}
-
-export default Orders
     </div>
   )
 }
