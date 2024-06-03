@@ -4,7 +4,7 @@
 
 3. <strong>Galeri oluşturma:</strong> Saç kesim , tırnak kesim vb. fotoğrafların gösterildiği sayfa oluşturma.
 
-4. <storng>Admin panelinde sipairş görüntüleme:</strong> Kullanıcının profilinde verdiği siparişlerin admin panelinde gözükmesi ve oradan kontrolü.
+4. <storng>Admin panelinde sipariş görüntüleme:</strong> Kullanıcının profilinde verdiği siparişlerin admin panelinde gözükmesi ve oradan kontrolü.
 
 5. <strong>Personel listeleme:</strong> Personellerin müşterilere sunulması ve kolayca erişilebilir hale getirilmesi sürecidir.
 
