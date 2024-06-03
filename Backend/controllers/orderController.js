@@ -74,6 +74,7 @@ const placeOrder =async(req,res)=>{
             
         }
     }
+    
      //Listing orders for admin panel 
      const listOrders =async (req,res)=>{
         try {
@@ -98,4 +99,4 @@ const placeOrder =async(req,res)=>{
 
     
 
-export {placeOrder,verifyOrder,listOrders}
+export {placeOrder,verifyOrder,listOrders, updateStatus}
