@@ -8,3 +8,11 @@ React Çatısı kullanıldı
 4. Galeri
 5. İletişim
 6. admin panelinde verilen sipariş
+
+## Cengiz Ekmekçi Tasarımlar
+1. Sepeti Görüntüleme
+2. Sepete Ekleme
+3. Sepetten Çıkarma
+4. Ürünleri listeleme
+5. Sipariş Verme
+6. Ödeme
