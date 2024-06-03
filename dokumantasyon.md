@@ -1,1 +1,1 @@
-[Cengiz Ekmekçi Dokümantasyon](https://app.gitbook.com/o/rCVr8gv5lvMRfvcEVcov/s/LeZ3oSOFolIzMetsvdCU/)
+[Cengiz Ekmekçi Dokümantasyon](https://cengizs-organization.gitbook.io/cengiz-ekmekci)
