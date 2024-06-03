@@ -1,9 +1,4 @@
-import React from 'react'
-import "../ORDERS/Orders.css"
-const Orders = () => {
-  return (
-    <div>
-        import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../ORDERS/Orders.css"
 import axios from "axios"
 import {toast} from "react-toastify"
@@ -68,11 +63,6 @@ const Orders = ({url}) => {
 
     </div>
         
-    </div>
-  )
-}
-
-export default Orders
     </div>
   )
 }
