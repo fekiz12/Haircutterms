@@ -6,12 +6,29 @@ import userRouter from "./routes/userRoute.js";
 import orderRouter from "./routes/orderRoute.js";
 import cartRouter from "./routes/cartRoute.js"
 import productRouter from "./routes/productRoute.js";
+const express = require('express');
+const cors = require('cors');
 
-//app config
+
+
+
+app.use(cors());
+
+
+app.use(cors({ origin: 'https://haircutterms.vercel.app/' }));
+
+
+
 const app=express();
 const port=4000;    
 
+// server.js
 
+module.exports = async (req, res) => {
+    // Backend işlevselliğini burada tanımla
+    res.status(200).json({ message: "Backend işlevselliği çalışıyor!" });
+  };
+  
 
 //middleware
 app.use(express.json())
