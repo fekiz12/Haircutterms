@@ -12,7 +12,7 @@
 10. Ürün Ekleme (Aslan)
 11. Ürün Silme (Arda)
 12. Admin sayfası sipariş durumu güncelleme (Arda)
-13. Sipariş Verme  (Cengiz)
+13. Sipariş Verme (Cengiz)
 14. Kullanıcı Sipariş Sayfası (Aslan)
 15. Sepeti görüntüleme (Cengiz)
 16. Sepete ekleme (Cengiz)
@@ -22,7 +22,7 @@
 20. Ürün listeleme (Cengiz)
 21. Personelleri Listeleme (Furkan)
 22. Admin Sipariş Görüntüleme(Furkan)
-23. Galeri oluşturma (Furkan)
+23. Galeri oluşturma (Arda)
 24. İletişim (Furkan)
 
 
