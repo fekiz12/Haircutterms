@@ -15,6 +15,7 @@ import Galery from './Pages/Galery/Galery';
 import Personel from './Pages/Personel/Personel';
 import Verify from './Pages/Verify/Verify';
 import MyOrders from './Pages/MyOrders/MyOrders';
+import axios from 'axios';
 
 
 const App = () => {
