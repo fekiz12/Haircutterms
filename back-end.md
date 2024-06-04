@@ -12,3 +12,4 @@ REST API: Kullanıldı
 2. Sepetten Çıkarma
 3. Sipariş Verme
 4. Ödeme
+5. Sepeti Görüntüleme
