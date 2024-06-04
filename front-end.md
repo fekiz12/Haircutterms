@@ -10,9 +10,19 @@ React Çatısı kullanıldı
 6. admin panelinde verilen sipariş
 
 ## Cengiz Ekmekçi Tasarımlar
+
 1. Sepeti Görüntüleme
 2. Sepete Ekleme
 3. Sepetten Çıkarma
 4. Ürünleri listeleme
 5. Sipariş Verme
 6. Ödeme
+
+## Arda Nemutlu Tasarımlar
+
+1. Admin Sayfası Sipariş Durumunu Güncelleme
+2. Admin Sayfası Ürünleri Silme
+3. Admin Sayfası Ürünlerin Listelenmesi
+4. İndirim/Kupon Uygulama
+5. Hizmetlerin Listelenmesi
+6. Hizmetlerin Favoriye Eklenmesi
