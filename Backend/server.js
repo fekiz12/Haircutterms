@@ -6,8 +6,7 @@ import userRouter from "./routes/userRoute.js";
 import orderRouter from "./routes/orderRoute.js";
 import cartRouter from "./routes/cartRoute.js"
 import productRouter from "./routes/productRoute.js";
-const express = require('express');
-const cors = require('cors');
+
 
 
 
@@ -15,7 +14,7 @@ const cors = require('cors');
 app.use(cors());
 
 
-app.use(cors({ origin: 'https://haircutterms.vercel.app/' }));
+
 
 
 
