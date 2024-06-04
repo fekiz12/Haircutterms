@@ -13,7 +13,7 @@ const port=4000;
 
 app.use(cors(
     {
-        origin:["link"],
+        origin:["https://haircutterms.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true
     }

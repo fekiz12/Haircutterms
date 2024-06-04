@@ -15,9 +15,17 @@ import Galery from './Pages/Galery/Galery';
 import Personel from './Pages/Personel/Personel';
 import Verify from './Pages/Verify/Verify';
 import MyOrders from './Pages/MyOrders/MyOrders';
+import axios from 'axios';
 
 
 const App = () => {
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios.post('https://haircutterms-api.vercel.app', )
+    .then(result => console.log(result))
+    .catch(err=> console.log(err))
+  }
 
   const [showLogin,setShowLogin] = useState(false)
   
