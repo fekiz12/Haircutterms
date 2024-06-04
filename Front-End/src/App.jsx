@@ -18,7 +18,21 @@ import MyOrders from './Pages/MyOrders/MyOrders';
 import axios from 'axios';
 
 
+
+
 const App = () => {
+  // Backend URL'si
+const backendURL = 'https://haircutterms-api.vercel.app'; // Bu URL'yi kendi backend URL'nizle değiştirin
+
+// Örnek bir GET isteği gönderme
+axios.get(`${backendURL}/api/data`)
+  .then(response => {
+    console.log('Backendden gelen veri:', response.data);
+    // Backend'den gelen veri ile bir şeyler yapabilirsiniz
+  })
+  .catch(error => {
+    console.error('Backend isteği sırasında bir hata oluştu:', error);
+  });
 
   const [showLogin,setShowLogin] = useState(false)
   
