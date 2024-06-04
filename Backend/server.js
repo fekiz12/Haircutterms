@@ -11,13 +11,7 @@ import productRouter from "./routes/productRoute.js";
 const app=express();
 const port=4000;    
 
-app.use(cors(
-    {
-        origin:["https://haircutterms.vercel.app"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
-));
+
 
 //middleware
 app.use(express.json())

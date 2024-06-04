@@ -20,13 +20,6 @@ import axios from 'axios';
 
 const App = () => {
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    axios.post('https://haircutterms-api.vercel.app', )
-    .then(result => console.log(result))
-    .catch(err=> console.log(err))
-  }
-
   const [showLogin,setShowLogin] = useState(false)
   
   return (
