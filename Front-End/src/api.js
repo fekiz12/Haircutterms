@@ -1,30 +1,15 @@
-// api.js
+import axios from 'axios';
 
-// Backend URL'sini doğru şekilde belirtin
-const API_URL = 'https://haircutterms-api.vercel.app';
+// Backend API'nin URL'si
+const backendURL = 'https://haircutterms-api.vercel.app';
 
-// Veri almak için fetchData fonksiyonunu tanımlayın
-export const fetchData = async () => {
-  try {
-    // Backend'den veri almak için fetch kullanın
-    const response = await fetch(`${API_URL}/api/user/register`);
-    
-    // HTTP yanıtını kontrol edin
-    if (!response.ok) {
-      throw new Error('Failed to fetch data');
-    }
-    
-    // JSON formatındaki yanıtı alın
-    const data = await response.json();
-    
-    // Veriyi döndürün
-    return data;
-  } catch (error) {
-    // Hata durumunda konsola hata mesajını yazdırın
+// Örnek bir GET isteği
+axios.get(`${backendURL}/example-endpoint`)
+  .then(response => {
+    // İstek başarılı olduysa burada işlem yapabilirsiniz
+    console.log(response.data);
+  })
+  .catch(error => {
+    // Hata durumunda burada işlem yapabilirsiniz
     console.error('Error fetching data:', error);
-    
-    // Hata durumunda null döndürün
-    return null;
-  }
-};
-
+  });
