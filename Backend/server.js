@@ -1,38 +1,42 @@
-import express from "express";
-import cors from "cors";
-import { connectDB } from "./config/db.js";
-import productRouter from "./routes/productRoute.js";
-import userRouter from "./routes/userRoute.js";
-import cartRouter from "./routes/cartRoute.js";
-import orderRouter from "./routes/orderRoute.js";
-import "dotenv/config.js";
+import express from 'express';
+import cors from 'cors';
+import { connectDB } from './config/db.js';
+import productRouter from './routes/productRoute.js';
+import userRouter from './routes/userRoute.js';
+import cartRouter from './routes/cartRoute.js';
+import orderRouter from './routes/orderRoute.js';
+import 'dotenv/config.js';
 
-//app config
+// App config
 const app = express();
 const FRONTEND_URL = 'https://haircutterms.vercel.app';
 
 app.use(cors({
-  origin: FRONTEND_URL,
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  credentials: true
-}));
+    origin: 'https://haircutterms.vercel.app',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true
+  }));
+  
 
-//middleware
+// Middleware
 app.use(express.json());
 
-//db connection
+// DB connection
 connectDB();
 
-//api endpoints
-app.use("/api/product", productRouter);
-app.use("/images", express.static("uploads"));
-app.use("/api/user", userRouter);
-app.use("/api/cart", cartRouter);
-app.use("/api/order", orderRouter);
+// API endpoints
+app.use('/api/product', productRouter);
+app.use('/images', express.static('uploads'));
+app.use('/api/user', userRouter);
+app.use('/api/cart', cartRouter);
+app.use('/api/order', orderRouter);
 
+app.get('/api/data', (req, res) => {
+  res.json({ message: 'Hello from backend!' });
+});
 
-app.get("/", (req, res) => {
-  res.send("API Working");
+app.get('/', (req, res) => {
+  res.send('API Working');
 });
 
 const PORT = process.env.PORT || 4000;
