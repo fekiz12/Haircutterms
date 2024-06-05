@@ -7,7 +7,7 @@ const API_URL = 'https://haircutterms-api.vercel.app';
 export const fetchData = async () => {
   try {
     // Backend'den veri almak için fetch kullanın
-    const response = await fetch(`${API_URL}/api/data`);
+    const response = await fetch(`${API_URL}`);
     
     // HTTP yanıtını kontrol edin
     if (!response.ok) {
