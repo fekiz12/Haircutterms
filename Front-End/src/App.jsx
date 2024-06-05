@@ -20,7 +20,10 @@ const API_URL = 'https://haircutterms-api.vercel.app';
 
 const fetchData = async () => {
   try {
-    const response = await fetch(`${API_URL}/api/data`); 
+    const response = await fetch(`${API_URL}/api/data`, {
+      method: 'GET',
+      credentials: 'include'
+    });
     const data = await response.json();
     return data;
   } catch (error) {
@@ -53,7 +56,6 @@ const App = () => {
     
 <>
 <div>
-      <h1>Data from API</h1>
       {data ? (
         <pre>{JSON.stringify(data, null, 2)}</pre>
       ) : (
