@@ -4,7 +4,7 @@ import axios from 'axios';
 const backendURL = 'https://haircutterms-api.vercel.app';
 
 // Örnek bir GET isteği
-axios.get(`${backendURL}/api/product/list`)
+axios.get(`${backendURL}`)
   .then(response => {
     // İstek başarılı olduysa burada işlem yapabilirsiniz
     console.log(response.data);
