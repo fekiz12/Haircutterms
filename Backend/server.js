@@ -3,49 +3,42 @@ import cors from "cors";
 import { connectDB } from "./config/db.js";
 import productRouter from "./routes/productRoute.js";
 import userRouter from "./routes/userRoute.js";
-import "dotenv/config.js"
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
+import "dotenv/config.js";
 
 //app config
-const app=express();
-const port=4000;    
-
+const app = express();
 const FRONTEND_URL = 'https://haircutterms.vercel.app';
 
 app.use(cors({
-  origin: FRONTEND_URL
+  origin: FRONTEND_URL,
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true
 }));
 
-app.get('/api/data', (req, res) => {
-  res.json({ message: 'Hello from backend!' });
-});
-
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
-
 //middleware
-app.use(express.json())
-//app.use(cors())
+app.use(express.json());
 
 //db connection
-
 connectDB();
 
 //api endpoints
-app.use("/api/product",productRouter);
-app.use("/images",express.static("uploads"));
-app.use("/api/user",userRouter)
-app.use("/api/cart",cartRouter)
-app.use("/api/order",orderRouter)
+app.use("/api/product", productRouter);
+app.use("/images", express.static("uploads"));
+app.use("/api/user", userRouter);
+app.use("/api/cart", cartRouter);
+app.use("/api/order", orderRouter);
 
+app.get("/api/data", (req, res) => {
+  res.json({ message: 'Hello from backend!' });
+});
 
-app.get("/",(req,res)=>{
-    res.send("API Working")
-})
+app.get("/", (req, res) => {
+  res.send("API Working");
+});
 
-app.listen(port,()=>{
-    console.log(`Server Started on http://localhost:${port}`);
-})
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
