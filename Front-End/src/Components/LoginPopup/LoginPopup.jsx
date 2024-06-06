@@ -16,8 +16,8 @@ const LoginPopup = ({setShowLogin}) => {
     })
     const onChangeHandler=(event)=>{
       var user = {
-        email: evt.target.elements.email.value,
-        password: evt.target.elements.password.value,
+        email: event.target.elements.email.value,
+        password: event.target.elements.password.value,
       };
       setData(user)
     }
