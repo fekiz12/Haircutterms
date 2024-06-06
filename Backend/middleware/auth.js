@@ -7,11 +7,12 @@ const authMiddleware=async (req,res,next)=>{
     }
     try {
         const token_decode=jwt.verify(token,process.env.JWT_SECRET);
+        console.log("Token: "+token_decode);
         req.body.userId=token_decode.id;
         next();
     } catch (error) {
-        console.log(error);
-        res.json({success:false,message:"Error"});
+        console.log("Hata 1:"+error);
+        res.json({success:false,message:error});
         
     }
 }

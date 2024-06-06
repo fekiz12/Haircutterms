@@ -23,6 +23,7 @@ const FRONTEND_URL = 'https://haircutterms.vercel.app';
 
 // Middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(allowCrossDomain);
 
 // DB connection
