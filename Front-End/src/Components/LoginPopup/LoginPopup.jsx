@@ -7,7 +7,7 @@ import axios from "axios"
 const LoginPopup = ({setShowLogin}) => {
 
     const {url,setToken}=useContext(StoreContext);
-   
+    console.log(url)
     const [currState, setCurrState] = useState("Login") 
     const [data,setData]=useState({
       name:"",
@@ -15,18 +15,12 @@ const LoginPopup = ({setShowLogin}) => {
       password:""
     })
     const onChangeHandler=(event)=>{
-      var user = {
-        email: event.target.elements.email.value,
-        password: event.target.elements.password.value,
-      };
-      setData(user)
+      const name=event.target.name;
+      const value=event.target.value;
+      setData({...data,[name]:value})
     }
     const onLogin=async (event)=>{
       event.preventDefault();
-      var user = {
-        email: event.target.elements.email.value,
-        password: event.target.elements.password.value,
-      };
       let newUrl=url;
       if(currState==="Login"){
         newUrl +="/api/user/login"
@@ -34,8 +28,8 @@ const LoginPopup = ({setShowLogin}) => {
       else{
         newUrl +="/api/user/register"
       }
-      const response=await axios.post(newUrl,user);
-      console.log(response.data)
+      const response=await axios.post(newUrl,data);
+      alert(JSON.parse(data))
       if(response.data.success){
         setToken(response.data.token);
         localStorage.setItem("token",response.data.token);
