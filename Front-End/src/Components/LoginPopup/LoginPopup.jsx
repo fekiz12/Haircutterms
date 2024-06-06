@@ -15,9 +15,11 @@ const LoginPopup = ({setShowLogin}) => {
       password:""
     })
     const onChangeHandler=(event)=>{
-      const name=event.target.name;
-      const value=event.target.value;
-      setData({...data,[name]:value})
+      var user = {
+        email: evt.target.elements.email.value,
+        password: evt.target.elements.password.value,
+      };
+      setData(user)
     }
     const onLogin=async (event)=>{
       event.preventDefault();
@@ -28,8 +30,8 @@ const LoginPopup = ({setShowLogin}) => {
       else{
         newUrl +="/api/user/register"
       }
-      const response=await axios.post(newUrl,data);
-      alert(data)
+      const response=await axios.post(newUrl,user);
+      console.log(response.data)
       if(response.data.success){
         setToken(response.data.token);
         localStorage.setItem("token",response.data.token);
