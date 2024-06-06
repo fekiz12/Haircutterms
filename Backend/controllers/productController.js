@@ -17,8 +17,8 @@ const addProduct =async(req,res)=>{
         await product.save();
         res.json({success:true,message:"Product Added"})
     }catch(error){
-        console.log(error)
-        res.json({success:false,message:"ERROR"})
+        console.log("Hata:"+error);
+        res.json({success:false,message:error});
     }
 
     // all product list 
@@ -38,8 +38,8 @@ const listProduct =async(req,res)=>{
         const product=await productModel.find({});
         res.json({success:true,data:product});
     }catch(error){
-        console.log(error);
-        res.json({success:false,message:"Error"});
+        console.log("Hata:"+error);
+        res.json({success:false,message:error});
     }
 }
 
@@ -51,8 +51,8 @@ const removeProduct =async(req,res)=>{
         await productModel.findByIdAndDelete(req.body.id);
         res.json({success:true,message:"Product removed"})
     }catch(error){
-        console.log(error);
-        res.json({success:false,message:"Error"})
+        console.log("Hata:"+error);
+        res.json({success:false,message:error});
     }
 }
 

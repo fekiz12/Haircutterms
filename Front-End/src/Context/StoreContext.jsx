@@ -8,7 +8,7 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({});
-    const url = "http://localhost:4000";
+    const url = "https://haircutterms-smos.vercel.app";
     const [token, setToken] = useState("");
     const [urunList, setUrunList] = useState([]);
 
@@ -19,14 +19,22 @@ const StoreContextProvider = (props) => {
             setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
         }
         if (token) {
-            await axios.post(url + "/api/cart/add", { itemId }, { headers: { token } });
+            try {
+                await axios.post(url + "/api/cart/add", { itemId }, { headers: { token } });
+            } catch (error) {
+                console.error("Failed to add to cart:", error);
+            }
         }
     };
 
     const removeFromCart = async (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
         if (token) {
-            await axios.post(url + "/api/cart/remove", { itemId }, { headers: { token } });
+            try {
+                await axios.post(url + "/api/cart/remove", { itemId }, { headers: { token } });
+            } catch (error) {
+                console.error("Failed to remove from cart:", error);
+            }
         }
     };
 
@@ -65,9 +73,9 @@ const StoreContextProvider = (props) => {
         async function loadData() {
             await fetchProductList();
             if (localStorage.getItem("token")) {
-                const token = localStorage.getItem("token");
-                setToken(token);
-                await loadCartData(token);
+                const storedToken = localStorage.getItem("token");
+                setToken(storedToken);
+                await loadCartData(storedToken);
             }
         }
         loadData();
