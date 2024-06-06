@@ -51,6 +51,7 @@ const StoreContextProvider = (props) => {
             console.error("Failed to fetch product list:", error);
         }
     };
+    
 
     const loadCartData = async (token) => {
         try {
