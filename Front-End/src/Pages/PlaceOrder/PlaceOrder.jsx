@@ -23,10 +23,11 @@ const PlaceOrder = () => {
     const onChangeHandler=(event)=>{
       const name=event.target.name;
       const value =event.target.value;
-      setData(data=>({...data,[name]:value}))
+      setData({...data,[name]:value})
     }
 
     const placeOrder= async(event)=>{
+      console.log(data)
       event.preventDefault();
       let orderItems=[];
       urunList.map((item)=>{
@@ -41,13 +42,15 @@ const PlaceOrder = () => {
         items:orderItems,
         amount:getTotalCartAmount()+2,
       }
+      console.log(url)
       let response =await axios.post(url+"/api/order/place",orderData,{headers:{token}});
+      console.log(response.data);
       if(response.data.success){
         const {session_url}=response.data;
         window.location.replace(session_url);
       }
       else{
-        alert("ERROR");
+        alert(response.data);
       }
 
     }
