@@ -24,6 +24,7 @@ const allowCrossDomain = function(req, res, next) {
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(allowCrossDomain);
+app.use(cors());
 
 // DB connection
 connectDB();
