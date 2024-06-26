@@ -1,0 +1,16 @@
+{
+  "name": "haircutterms-1",
+  "version": "1.0.0",
+  "description": "Haircutterms, kullanıcı dostu arayüzü ve kolay rezervasyon sistemi ile müşterilerin ihtiyaçlarını karşılamayı amaçlar. Müşteriler, tercih ettikleri tarih ve saatte randevu alabilir, belirli bir berberi tercih edebilir veya hizmet tipine göre arama yapabilirler. Hayvan dostu ve çevre dostu güzellik ürünlerini bulmak ve keşfetmek için bir platformdur. Haircutterms, kullanıcılarına etik kaynaklardan gelen güzellik ürünlerini keşfetme ve satın alma fırsatı sunar.",
+  "main": "server.js",
+  "scripts": {
+    "server":"nodemon Backend/server",
+    "client": "npm start --prefix denemeodev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"" 
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

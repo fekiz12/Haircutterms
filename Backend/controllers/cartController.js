@@ -15,8 +15,8 @@ const addToCart =async (req,res)=>{
     res.json({success:true,message:"Added to Cart"});
 
     }catch(error){
-        console.log(error);
-        res.json({success:false,message:"Error"});
+        console.log("Hata:"+error);
+        res.json({success:false,message:error});
     }
 }
 
@@ -33,8 +33,8 @@ const removeFromCart=async(req,res)=>{
         await userModel.findByIdAndUpdate(req.body.userId,{cartData});
         res.json({success:true,message:"Removed From The Cart"});
     } catch (error) {
-        console.log(error);
-        res.json({success:false,message:"Error"});
+        console.log("Hata:"+error);
+        res.json({success:false,message:error});
         
     }
 }
@@ -46,8 +46,8 @@ const getCart=async (req,res)=>{
     let cartData= await userData.cartData;
     res.json({succes:true,cartData});
    } catch (error) {
-        console.log(error);
-        res.json({succes:false,message:"Error"});
+    console.log("Hata:"+error);
+    res.json({success:false,message:error});
    }
 
 
