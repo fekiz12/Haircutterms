@@ -19,22 +19,14 @@ const StoreContextProvider = (props) => {
             setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
         }
         if (token) {
-            try {
-                await axios.post(url + "/api/cart/add", { itemId }, { headers: { token } });
-            } catch (error) {
-                console.error("Failed to add to cart:", error);
-            }
+            await axios.post(url + "/api/cart/add", { itemId }, { headers: { token } });
         }
     };
 
     const removeFromCart = async (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
         if (token) {
-            try {
-                await axios.post(url + "/api/cart/remove", { itemId }, { headers: { token } });
-            } catch (error) {
-                console.error("Failed to remove from cart:", error);
-            }
+            await axios.post(url + "/api/cart/remove", { itemId }, { headers: { token } });
         }
     };
 
@@ -59,6 +51,7 @@ const StoreContextProvider = (props) => {
             console.error("Failed to fetch product list:", error);
         }
     };
+    
 
     const loadCartData = async (token) => {
         try {
@@ -73,9 +66,9 @@ const StoreContextProvider = (props) => {
         async function loadData() {
             await fetchProductList();
             if (localStorage.getItem("token")) {
-                const storedToken = localStorage.getItem("token");
-                setToken(storedToken);
-                await loadCartData(storedToken);
+                const token = localStorage.getItem("token");
+                setToken(token);
+                await loadCartData(token);
             }
         }
         loadData();

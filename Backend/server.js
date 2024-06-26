@@ -9,22 +9,22 @@ import 'dotenv/config.js';
 
 // App config
 const app = express();
-var allowCrossDomain = function(req, res, next) { 
-  res.setHeader("Access-Control-Allow-Origin", "*");
-res.setHeader("Access-Control-Allow-Credentials", "true");
-res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
-next();
-}
 const FRONTEND_URL = 'https://haircutterms.vercel.app';
 
-
-  
+// CORS middleware
+const allowCrossDomain = function(req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', FRONTEND_URL);
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, token');
+  next();
+};
 
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(allowCrossDomain);
+app.use(cors());
 
 // DB connection
 connectDB();
