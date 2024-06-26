@@ -5,4 +5,4 @@
 3. Sepeti Görüntüleme
 4. Sipariş Verme
 5. Ödeme Yapma
-[Cengiz Ekmekçi](https://youtu.be/nvQBIU1FOqQ?si=eHX6MkmjJs_cXV-R)
+6. [Cengiz Ekmekçi Test](https://youtu.be/nvQBIU1FOqQ?si=eHX6MkmjJs_cXV-R)
