@@ -19,4 +19,4 @@ REST API: Kullanıldı
 1. Admin Sayfası Sipariş Durumunu Güncelleme
 2. Admin Sayfası Ürünleri Silme
 3. Admin Sayfası Ürünlerin Listelenmesi
-4. Hizmetlerin Listelenmesi
+
