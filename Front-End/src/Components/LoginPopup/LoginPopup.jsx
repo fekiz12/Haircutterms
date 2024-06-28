@@ -1,25 +1,9 @@
-import React, { useContext, useState } from 'react'
+import React, {  useContext, useState } from 'react'
 import './LoginPopup.css'
 import carpi from "../../Assets/cross_icon.png"
 import { StoreContext } from '../../Context/StoreContext'
 import axios from "axios"
-
-// Cookie yardımcı fonksiyonlarını ekle
-function getCookie(name) {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
-}
-
-function setCookie(name, value, expiryDays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (expiryDays * 24 * 60 * 60 * 1000));
-    const expires = "expires="+ d.toUTCString();
-    document.cookie = name + "=" + value + ";" + expires + ";path=/";
-}
-
 const LoginPopup = ({setShowLogin}) => {
-
     const {url,setToken}=useContext(StoreContext);
     console.log(url)
     const [currState, setCurrState] = useState("Login") 
@@ -31,10 +15,11 @@ const LoginPopup = ({setShowLogin}) => {
     const onChangeHandler=(event)=>{
       const name=event.target.name;
       const value=event.target.value;
-   
+
       setData({...data,[name]:value})
     }
     const onLogin=async (event)=>{
+      console.log(data)
       event.preventDefault();
       let newUrl=url;
       if(currState==="Login"){
@@ -43,9 +28,12 @@ const LoginPopup = ({setShowLogin}) => {
       else{
         newUrl +="/api/user/register"
       }
+      console.log(newUrl)
       const response=await axios.post(newUrl,data);
+      console.log(response.data)
       if(response.data.success){
-        setCookie("token", response.data.token, /*geçerlilik süresi*/); // Geçerlilik süresini belirtin
+        setToken(response.data.token);
+        localStorage.setItem("token",response.data.token);
         setShowLogin(false);
       }
       else{
@@ -53,7 +41,6 @@ const LoginPopup = ({setShowLogin}) => {
       }
     }
     
-
   return (
     <div className='login'>
       <form onSubmit={onLogin}  className="login_popup-container">
@@ -80,5 +67,4 @@ const LoginPopup = ({setShowLogin}) => {
     </div>
   )
 }
-
 export default LoginPopup
