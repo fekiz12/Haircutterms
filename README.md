@@ -10,6 +10,8 @@ Haircutterms, kullanıcı dostu arayüzü ve kolay rezervasyon sistemi ile müş
 
 <strong>Uygulama Adresi:</strong> [Uygulama Local Çalışma Videosu](https://youtu.be/JW2dEkuvkvA)
 
+                                  [Haircutterms](haircutterms.vercel.app/)
+
 <strong>Grup Adı:</strong> Vultures
 
 <strong>Proje Ekibi:</strong> Furkan, Arda, Cengiz, Aslan
