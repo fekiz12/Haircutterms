@@ -8,7 +8,7 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({});
-    const url = "https://haircutterms-smos.vercel.app";
+    const url = "https://haircutterms-api.vercel.app";
     const [token, setToken] = useState("");
     const [urunList, setUrunList] = useState([]);
 
